@@ -12,8 +12,8 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit test",
-        "coverage": "vendor/bin/phpunit --coverage-html ./tmp test"
+        "test": "vendor/bin/phpunit",
+        "coverage": "vendor/bin/phpunit --coverage-html ./coverage"
     },
     "authors": [
         {

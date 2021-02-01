@@ -4,13 +4,10 @@ namespace Ru\TechnicalExcellence\CodingDojo;
 
 use PHPUnit\Framework\TestCase;
 
-class HelloWorldTest extends TestCase
+class HelloWorldShould extends TestCase
 {
 
-    /**
-     * @var HelloWorld
-     */
-    private $helloWorld;
+    private HelloWorld $helloWorld;
 
     protected function setUp(): void
     {
@@ -19,7 +16,10 @@ class HelloWorldTest extends TestCase
     }
 
 
-    public function testHelloWorld()
+    /**
+     * @test
+     */
+    public function returnHelloWorld(): void
     {
 
         $this->assertEquals("Hello World!", $this->helloWorld->helloWorld());
