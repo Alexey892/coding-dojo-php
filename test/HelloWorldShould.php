@@ -1,8 +1,7 @@
 <?php
 
-namespace Ru\TechnicalExcellence\CodingDojo;
-
 use PHPUnit\Framework\TestCase;
+use Ru\TechnicalExcellence\CodingDojo\HelloWorld;
 
 class HelloWorldShould extends TestCase
 {
