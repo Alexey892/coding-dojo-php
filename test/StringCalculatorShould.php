@@ -32,8 +32,24 @@ class StringCalculatorShould extends TestCase
     /**
      * @test
      */
-    public function returnSumFromString(): void
+    public function returnSumFromTwoNumbers(): void
     {
         $this->assertEquals(3, $this->stringCalculator->add('2,1'));
+    }
+
+    /**
+     * @test
+     */
+    public function returnSumFromSeveralNumbers(): void
+    {
+        $this->assertEquals(10, $this->stringCalculator->add('5,2,3'));
+    }
+
+    /**
+     * @test
+     */
+    public function returnSumFromSeveralNumbersWithSlashSeparator(): void
+    {
+        $this->assertEquals(6, $this->stringCalculator->add('1,2\n3'));
     }
 }
