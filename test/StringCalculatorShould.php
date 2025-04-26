@@ -3,6 +3,7 @@
 use PHPUnit\Framework\TestCase;
 use Ru\TechnicalExcellence\CodingDojo\StringCalculator;
 
+die;
 class StringCalculatorShould extends TestCase
 {
     private StringCalculator $stringCalculator;
