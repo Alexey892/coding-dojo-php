@@ -20,4 +20,12 @@ class StringCalculatorShould extends TestCase
     {
         $this->assertEquals('', $this->stringCalculator->add(null));
     }
+
+    /**
+     * @test
+     */
+    public function returnNumberWhenString(): void
+    {
+        $this->assertEquals(1, $this->stringCalculator->add('1'));
+    }
 }
