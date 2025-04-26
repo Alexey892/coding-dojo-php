@@ -15,6 +15,6 @@ class RomanNumberConverter
 
     public function convert(int $value): string
     {
-        return '';
+        return 'I';
     }
 }
