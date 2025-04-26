@@ -18,9 +18,8 @@ class StringCalculatorShould extends TestCase
     /**
      * @test
      */
-    public function returnHelloWorld(): void
+    public function returnEmptyStringWhenNull(): void
     {
-
-        $this->assertEquals("Hello World!", $this->helloWorld->helloWorld());
+        $this->assertEquals('', $this->stringCalculator->add(null));
     }
 }
