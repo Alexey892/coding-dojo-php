@@ -5,7 +5,6 @@ use Ru\TechnicalExcellence\CodingDojo\StringCalculator;
 
 class StringCalculatorShould extends TestCase
 {
-
     private StringCalculator $stringCalculator;
 
     protected function setUp(): void
@@ -13,7 +12,6 @@ class StringCalculatorShould extends TestCase
         parent::setUp();
         $this->stringCalculator = new StringCalculator();
     }
-
 
     /**
      * @test

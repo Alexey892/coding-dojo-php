@@ -6,7 +6,6 @@ namespace Ru\TechnicalExcellence\CodingDojo;
 
 class StringCalculator
 {
-
     /**
      * HelloWorld constructor.
      */
@@ -14,11 +13,10 @@ class StringCalculator
     {
     }
 
-
     /**
      * @return string
      */
-    public function add(string $value): string
+    public function add(?string $value): string
     {
         return '';
     }
