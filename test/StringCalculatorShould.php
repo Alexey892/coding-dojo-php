@@ -52,4 +52,12 @@ class StringCalculatorShould extends TestCase
     {
         $this->assertEquals(6, $this->stringCalculator->sum('1,2\n3'));
     }
+
+    /**
+     * @test
+     */
+    public function returnSumFromSeveralNumbersWithDifferentSeparators(): void
+    {
+        $this->assertEquals(3, $this->stringCalculator->sum('//;\n1;2'));
+    }
 }
