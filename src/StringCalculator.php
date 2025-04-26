@@ -16,6 +16,7 @@ class StringCalculator
     public function sum(?string $value): int
     {
         $sum = 0;
+        preg_match('/\/\/(.)/', $value, $matches);
         $value = str_replace('\n', ',', $value);
         $values = explode(',', $value);
         foreach ($values as $value) {

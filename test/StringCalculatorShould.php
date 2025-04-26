@@ -54,6 +54,7 @@ class StringCalculatorShould extends TestCase
     }
 
     /**
+     * 4. Поддержка разных разделителей “//[delimiter]\n[numbers…]”:
      * @test
      */
     public function returnSumFromSeveralNumbersWithDifferentSeparators(): void
