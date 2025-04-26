@@ -14,10 +14,10 @@ class StringCalculator
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function add(?string $value): string
+    public function add(?string $value): int
     {
-        return '';
+        return (int)$value;
     }
 }

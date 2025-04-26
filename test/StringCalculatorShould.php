@@ -18,7 +18,7 @@ class StringCalculatorShould extends TestCase
      */
     public function returnEmptyStringWhenNull(): void
     {
-        $this->assertEquals('', $this->stringCalculator->add(null));
+        $this->assertEquals(0, $this->stringCalculator->add(null));
     }
 
     /**
