@@ -13,11 +13,14 @@ class StringCalculator
     {
     }
 
-    /**
-     * @return int
-     */
     public function add(?string $value): int
     {
-        return (int)$value;
+        $sum = 0;
+        $values = explode(',', $value);
+        foreach ($values as $value) {
+            $sum += (int)$value;
+        }
+
+        return $sum;
     }
 }
