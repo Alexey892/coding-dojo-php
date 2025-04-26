@@ -13,9 +13,10 @@ class StringCalculator
     {
     }
 
-    public function add(?string $value): int
+    public function sum(?string $value): int
     {
         $sum = 0;
+        $value = str_replace('\n', ',', $value);
         $values = explode(',', $value);
         foreach ($values as $value) {
             $sum += (int)$value;

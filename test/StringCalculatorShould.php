@@ -18,7 +18,7 @@ class StringCalculatorShould extends TestCase
      */
     public function returnEmptyStringWhenNull(): void
     {
-        $this->assertEquals(0, $this->stringCalculator->add(null));
+        $this->assertEquals(0, $this->stringCalculator->sum(null));
     }
 
     /**
@@ -26,7 +26,7 @@ class StringCalculatorShould extends TestCase
      */
     public function returnNumberWhenString(): void
     {
-        $this->assertEquals(1, $this->stringCalculator->add('1'));
+        $this->assertEquals(1, $this->stringCalculator->sum('1'));
     }
 
     /**
@@ -34,7 +34,7 @@ class StringCalculatorShould extends TestCase
      */
     public function returnSumFromTwoNumbers(): void
     {
-        $this->assertEquals(3, $this->stringCalculator->add('2,1'));
+        $this->assertEquals(3, $this->stringCalculator->sum('2,1'));
     }
 
     /**
@@ -42,7 +42,7 @@ class StringCalculatorShould extends TestCase
      */
     public function returnSumFromSeveralNumbers(): void
     {
-        $this->assertEquals(10, $this->stringCalculator->add('5,2,3'));
+        $this->assertEquals(10, $this->stringCalculator->sum('5,2,3'));
     }
 
     /**
@@ -50,6 +50,6 @@ class StringCalculatorShould extends TestCase
      */
     public function returnSumFromSeveralNumbersWithSlashSeparator(): void
     {
-        $this->assertEquals(6, $this->stringCalculator->add('1,2\n3'));
+        $this->assertEquals(6, $this->stringCalculator->sum('1,2\n3'));
     }
 }
