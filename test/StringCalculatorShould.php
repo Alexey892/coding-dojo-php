@@ -28,4 +28,12 @@ class StringCalculatorShould extends TestCase
     {
         $this->assertEquals(1, $this->stringCalculator->add('1'));
     }
+
+    /**
+     * @test
+     */
+    public function returnSumFromString(): void
+    {
+        $this->assertEquals(3, $this->stringCalculator->add('2,1'));
+    }
 }
