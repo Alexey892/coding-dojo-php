@@ -39,7 +39,13 @@ class HelloWorldShould extends TestCase
 
     public function testNegativeNumber(): void
     {
-        $this->stringCalculator->add('-1,2');
         $this->expectExceptionMessage('Negative numbers not allowed: -1');
+        $this->stringCalculator->add('-1,2');
+    }
+
+    public function testNumberOver1000(): void
+    {
+        $this->assertEquals(2,$this->stringCalculator->add('2,3000'));
+        $this->assertEquals(1,$this->stringCalculator->add('1,2000'));
     }
 }
