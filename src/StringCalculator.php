@@ -6,6 +6,8 @@ class StringCalculator
 {
     public function add(string $num): int
     {
-        return 5;
+        preg_match_all('/[0-2]/', $num, $matches);
+
+        return array_sum($matches[0]);
     }
 }

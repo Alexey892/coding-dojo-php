@@ -32,6 +32,7 @@ class HelloWorldShould extends TestCase
         $this->assertEquals(0,$this->stringCalculator->add(''));
         $this->assertEquals(1,$this->stringCalculator->add('1'));
         $this->assertEquals(3,$this->stringCalculator->add('1,2'));
+        $this->assertEquals(3,$this->stringCalculator->add('1,2,3'));
     }
 
 
