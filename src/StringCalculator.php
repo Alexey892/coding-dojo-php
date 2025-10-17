@@ -6,14 +6,28 @@ use Exception;
 
 class StringCalculator
 {
+    /**
+     * @throws Exception
+     */
     public function add(string $num): int
     {
-        preg_match_all('/-\d/', $num, $matchesNegative);
-        preg_match_all('/[0-2]/', $num, $matches);
-        print_r($matchesNegative[0]);
-        if($matchesNegative[0] !== []){
-            throw new Exception('Negative numbers not allowed: ' . implode(', ', $matchesNegative[0]));
+        preg_match_all('/-?[0-2]+/', $num, $matches);
+
+        $matchesNegative = [];
+        $sum = 0;
+        foreach ($matches[0] as $number) {
+            if($number < 0){
+                $matchesNegative[] = $number;
+            }
+            if($number < 1000){
+                $sum += (int)$number;
+            }
         }
-        return array_sum($matches[0]);
+
+        if($matchesNegative !== []){
+            throw new Exception('Negative numbers not allowed: ' . implode(', ', $matchesNegative));
+        }
+
+        return $sum;
     }
 }
